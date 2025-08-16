@@ -7,7 +7,7 @@ interface ContainerProps {
 }
 
 const Container: React.FC<ContainerProps> = ({ children, className }) => {
-  return <div className={cn(className," mx-auto px-4")}>{children}</div>;
+  return <div className={cn(className," mx-auto")}>{children}</div>;
 };
 
 export default Container;
