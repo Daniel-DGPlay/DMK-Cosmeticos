@@ -7,16 +7,20 @@ export const MobileMenu = () => {
     const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
     return (
       <div>
-        <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="md:hidden">
-            <AlignLeft className="hover:text-pink-950 cursor-pointer transition-all duration-300 md:hidden md:gap-0" />
+        <button
+          onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+          className="md:hidden"
+          title="Abrir Menu"
+        >
+          <AlignLeft className="hover:text-pink-950 cursor-pointer transition-all duration-300 md:hidden md:gap-0 size-9" />
         </button>
         <div className="md:hidden">
-            <SideMenu
-                isOpen={isSidebarOpen}
-                onClose={() => setIsSidebarOpen(false)}
-            />
+          <SideMenu
+            isOpen={isSidebarOpen}
+            onClose={() => setIsSidebarOpen(false)}
+          />
         </div>
       </div>
-  );
+    );
 }
 export default MobileMenu;
