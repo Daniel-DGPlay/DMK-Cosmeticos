@@ -1,4 +1,4 @@
-import { ShoppingBag, ShoppingCart } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
 import React from 'react'
 
 export const CarrinhoBtn = () => {
@@ -13,11 +13,10 @@ export const CarrinhoBtn = () => {
       >
         <ShoppingCart size={24} />
         {cartCount > 0 && (
-          <span className="absolute -top-2 -right-2 bg-pink-900 text-white text-xs rounded-full px-1.5 pb-0.5">
+          <span className="absolute -top-2 -right-2 bg-pink-950 text-white text-xs rounded-full px-1.5 pb-0.5">
             {cartCount}
           </span>
         )}
-        {/* <ShoppingBag size={24} /> */}
       </button>
     </div>
   );

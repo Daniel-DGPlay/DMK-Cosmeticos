@@ -6,7 +6,7 @@ import SideMenu from './SideMenu';
 export const MobileMenu = () => {
     const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
     return (
-      <div>
+      <view>
         <button
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
           className="md:hidden"
@@ -20,7 +20,7 @@ export const MobileMenu = () => {
             onClose={() => setIsSidebarOpen(false)}
           />
         </div>
-      </div>
+      </view>
     );
 }
 export default MobileMenu;

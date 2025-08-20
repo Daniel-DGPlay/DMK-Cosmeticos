@@ -17,12 +17,12 @@ const Header = () => {
             <Logo />
           </div>
           <HeaderMenu />
-            <div className="w-auto ls:w-1/3 flex items-center gap-5">
-              <SearchBar />
-              <CarrinhoBtn />
-              <FavoritoBtn />
-              <Signin />
-            </div>
+          <div className="w-auto hidden sm:inline-flex ls:w-1/3 fle x items-center gap-5">
+            <SearchBar />
+            <CarrinhoBtn />
+            <FavoritoBtn />
+            <Signin />
+          </div>
         </Container>
       </header>
     );
