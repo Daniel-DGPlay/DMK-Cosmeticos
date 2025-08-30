@@ -8,13 +8,16 @@ import SearchBar from './SearchBar';
 import CarrinhoBtn from './CarrinhoBtn';
 import FavoritoBtn from './FavoritosBtn';
 import Signin from './Signin';
+import SocialMedia from './SocialMedia';
+import { useOutsideClick } from '@/hooks';
 interface SideMenuProps {
     isOpen: boolean;
     onClose: () => void;
 }
 
 const SideMenu: FC<SideMenuProps> = ({ isOpen, onClose }) => {
-    const pathname = usePathname();
+  const pathname = usePathname();
+  const sidebarRef = useOutsideClick<HTMLDivElement>(()=>onClose());
     return (
       <view
         className={`fixed inset-y-0 h-screen left-0 z-50 w-full bg-pink-950/50 shadow-xl 
@@ -33,29 +36,34 @@ const SideMenu: FC<SideMenuProps> = ({ isOpen, onClose }) => {
               <X className="size-9" />
             </button>
           </div>
-          <div className='flex flex-col space-y-3.5'>
+          <div className="flex flex-col space-y-3.5 font-semibold tracking-wide">
             {headerData?.map((item) => (
               <Link
                 key={item?.title}
                 href={item?.href}
-                className={`flex items-center gap-2 font-semibold tracking-wide hover:text-pink-950 transition-colors duration-300 
-                ${pathname === item?.href ? "text-pink-950 font-bold" : "text-white"}`}
+                className={`flex items-center gap-2  hover:text-pink-950 transition-colors duration-300 
+                ${
+                  pathname === item?.href
+                    ? "text-pink-950 font-bold"
+                    : "text-white"
+                }`}
               >
                 {item?.title}
               </Link>
             ))}
           </div>
-          <hr className='border-pink-800' />
-           <div className="w-auto flex ls:w-1/3 fle x items-center gap-5">
-             <SearchBar />
-             <CarrinhoBtn />
-             <FavoritoBtn />
-             <Signin />
-           </div>
+          <hr className="border-pink-800" />
+          <div ref={sidebarRef} className="w-auto flex ls:w-1/3 fle x items-center gap-5">
+            <SearchBar />
+            <CarrinhoBtn />
+            <FavoritoBtn />
+            <Signin />
+          </div>
+          <hr className="border-pink-800" />
+          <SocialMedia />
         </div>
       </view>
     );
 };
 
 export default SideMenu;
-// fixed top-0 left-0 w-64 h-full bg-pink-950 shadow-lg transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out z-50
