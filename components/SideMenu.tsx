@@ -28,6 +28,7 @@ const SideMenu: FC<SideMenuProps> = ({ isOpen, onClose }) => {
         <div className="min-w-72 max-w-96 bg-pink-900 h-screen p-10 border-r flex flex-col gap-6">
           <div className="flex items-center justify-between gap-5">
             <Logo />
+
             <button
               className="cursor-pointer text-white hover:text-pink-950 transition-colors duration-300"
               onClick={onClose}
@@ -36,6 +37,7 @@ const SideMenu: FC<SideMenuProps> = ({ isOpen, onClose }) => {
               <X className="size-9" />
             </button>
           </div>
+
           <div className="flex flex-col space-y-3.5 font-semibold tracking-wide">
             {headerData?.map((item) => (
               <Link
@@ -52,14 +54,18 @@ const SideMenu: FC<SideMenuProps> = ({ isOpen, onClose }) => {
               </Link>
             ))}
           </div>
+
           <hr className="border-pink-800" />
+
           <div ref={sidebarRef} className="w-auto flex ls:w-1/3 fle x items-center gap-5">
             <SearchBar />
             <CarrinhoBtn />
             <FavoritoBtn />
             <Signin />
           </div>
+
           <hr className="border-pink-800" />
+
           <SocialMedia />
         </div>
       </view>

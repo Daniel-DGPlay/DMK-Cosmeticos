@@ -33,10 +33,10 @@ const socialLink = [
   },
 ];
 
-const SocialMedia = ({className,iconClassName,tooltipClassName}:Props) => {
+const SocialMedia = ({className,iconClassName,tooltipClassName}: Props) => {
   return (
     <TooltipProvider>
-      <div className={cn("flex items-center gap-4")}>
+      <view className={cn("flex items-center gap-4", className)}>
         {socialLink?.map((item) => (
           <Tooltip key={item?.title}>
             <TooltipTrigger asChild>
@@ -61,7 +61,7 @@ const SocialMedia = ({className,iconClassName,tooltipClassName}:Props) => {
             </TooltipContent>
           </Tooltip>
         ))}
-      </div>
+      </view>
     </TooltipProvider>
   );
 }
