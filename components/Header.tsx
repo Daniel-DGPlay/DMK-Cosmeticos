@@ -10,6 +10,8 @@ import MobileMenu from "./MobileMenu";
 import { currentUser } from "@clerk/nextjs/server";
 import { ClerkLoaded } from "@clerk/nextjs";
 import { SignedIn, UserButton } from "@clerk/nextjs";
+import { ToggleTheme } from "@/components/toggle-theme";
+
 
 const Header = async () => {
   const user = await currentUser();
@@ -29,6 +31,7 @@ const Header = async () => {
           <CarrinhoBtn />
           <FavoritoBtn />
 
+            <ToggleTheme />
           <ClerkLoaded>
             <SignedIn>
               <UserButton />
@@ -36,6 +39,7 @@ const Header = async () => {
 
             {!user && <Signin />}
           </ClerkLoaded>
+
         </view>
       </Container>
     </header>
