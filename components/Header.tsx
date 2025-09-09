@@ -10,13 +10,14 @@ import MobileMenu from "./MobileMenu";
 import { currentUser } from "@clerk/nextjs/server";
 import { ClerkLoaded } from "@clerk/nextjs";
 import { SignedIn, UserButton } from "@clerk/nextjs";
+import { ToggleTheme } from "@/components/toggle-theme";
 
 const Header = async () => {
   const user = await currentUser();
   console.log(user, "user no header");
   return (
     <header>
-      <Container className="bg-pink-700 text-white py-4 px-4 md:px-20 flex items-center justify-between">
+      <Container className="bg-blue-700 text-white py-4 px-4 md:px-20 flex items-center justify-between">
         <view className="w-auto ls:w-1/3 flex items-center gap-2.5 md:gap-0 justify-start">
           <MobileMenu />
           <Logo />
@@ -36,6 +37,7 @@ const Header = async () => {
 
             {!user && <Signin />}
           </ClerkLoaded>
+          <ToggleTheme />
         </view>
       </Container>
     </header>

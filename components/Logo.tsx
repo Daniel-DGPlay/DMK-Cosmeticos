@@ -5,13 +5,13 @@ const Logo = () => {
   return (
     <Link
       href="/"
-      className="text-white hover:text-pink-950 transition-all duration-300"
+      className="text-white hover:text-blue-950 transition-all duration-300"
       title="DMK Cosméticos"
       aria-label="DMK Cosméticos"
     >
       {/* <h2>Logo</h2> */}
-      <h1 className="font-bold text-2xl leading-5">DMK Cosméticos</h1>
-      <p className="text-sm font-sans">Sua loja de cosméticos online</p>
+      <h1 className="font-bold text-2xl leading-5">Leões Imobiliária</h1>
+      <p className="text-sm font-sans">Sistemas Administrativo</p>
     </Link>
   );
 };

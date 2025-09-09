@@ -3,12 +3,12 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-pink-950 text-white py-4">
+    <footer className="bg-blue-950 text-white py-4">
       <Container>
         <div className="container mx-auto text-center">
           <p className="text-sm">
-            &copy; {new Date().getFullYear()} DMK Cosméticos. Todos os direitos
-            reservados.
+            &copy; {new Date().getFullYear()} Leões Imobiliária. Todos os
+            direitos reservados.
           </p>
 
           <p className="text-xs mt-2">

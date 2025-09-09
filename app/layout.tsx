@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { ClerkProvider } from "@clerk/nextjs"; 
+import { ClerkProvider } from "@clerk/nextjs";
 import { ptBR } from "@clerk/localizations";
 import { View } from "lucide-react";
 
@@ -25,20 +25,20 @@ export const metadata: Metadata = {
 
 const appearance = {
   variables: {
-    colorPrimary: '#db2777',         // Rosa escuro (botões, links)
-    colorBackground: '#fff1f2',      // Fundo do modal
-    colorText: '#111827',            // Texto padrão
-    colorInputBackground: '#ffffff', // Fundo dos campos de input
-    borderRadius: '0.5rem',          // Arredondamento geral
-    fontFamily: 'Inter, sans-serif',
+    colorPrimary: "#db2777", // Rosa escuro (botões, links)
+    colorBackground: "#fff1f2", // Fundo do modal
+    colorText: "#111827", // Texto padrão
+    colorInputBackground: "#ffffff", // Fundo dos campos de input
+    borderRadius: "0.5rem", // Arredondamento geral
+    fontFamily: "Inter, sans-serif",
   },
   elements: {
-    card: 'shadow-lg border border-pink-200 bg-pink-50', // Card (área principal do modal)
-    headerTitle: 'text-xl text-pink-800 font-bold',
-    formButtonPrimary: 'bg-pink-600 hover:bg-pink-700 text-white font-semibold',
-    formFieldInput: 'bg-white border-pink-400 focus:border-pink-600',
-    footerActionText: 'text-sm text-gray-500',
-    footerActionLink: 'text-pink-600 hover:underline',
+    card: "shadow-lg border border-blue-200 bg-blue-50", // Card (área principal do modal)
+    headerTitle: "text-xl text-blue-800 font-bold",
+    formButtonPrimary: "bg-blue-600 hover:bg-blue-700 text-white font-semibold",
+    formFieldInput: "bg-white border-blue-400 focus:border-blue-600",
+    footerActionText: "text-sm text-gray-500",
+    footerActionLink: "text-blue-600 hover:underline",
   },
 };
 
@@ -55,14 +55,14 @@ export default function RootLayout({
         >
           <div className="flex min-h-screen flex-col">
             <Header />
-              <ThemeProvider
-                attribute="class"
-                defaultTheme="system"
-                enableSystem
-                disableTransitionOnChange
-              >
-                <main className="flex-1">{children}</main>
-              </ThemeProvider>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              <main className="flex-1">{children}</main>
+            </ThemeProvider>
             <Footer />
           </div>
         </body>

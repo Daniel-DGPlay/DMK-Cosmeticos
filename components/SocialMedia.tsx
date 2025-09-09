@@ -1,13 +1,13 @@
-import { Facebook, Instagram, Globe } from 'lucide-react'
-import React from 'react'
+import { Facebook, Instagram, Globe } from "lucide-react";
+import React from "react";
 import {
   Tooltip,
   TooltipTrigger,
   TooltipProvider,
   TooltipContent,
 } from "@/components/ui/tooltip";
-import Link from 'next/link';
-import { cn } from '@/lib/utils';
+import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 interface Props {
   className?: string;
@@ -33,7 +33,7 @@ const socialLink = [
   },
 ];
 
-const SocialMedia = ({className,iconClassName,tooltipClassName}: Props) => {
+const SocialMedia = ({ className, iconClassName, tooltipClassName }: Props) => {
   return (
     <TooltipProvider>
       <view className={cn("flex items-center gap-4", className)}>
@@ -43,7 +43,7 @@ const SocialMedia = ({className,iconClassName,tooltipClassName}: Props) => {
               <Link
                 href={item?.href}
                 className={cn(
-                  "p-2 border border-pink-950 rounded-full hover:text-pink-950 hover:border-white",
+                  "p-2 border border-blue-950 rounded-full hover:text-blue-950 hover:border-white",
                   iconClassName
                 )}
                 target="_blank"
@@ -64,6 +64,6 @@ const SocialMedia = ({className,iconClassName,tooltipClassName}: Props) => {
       </view>
     </TooltipProvider>
   );
-}
+};
 
-export default SocialMedia
+export default SocialMedia;
